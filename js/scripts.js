@@ -1,5 +1,4 @@
-"use strict";
-const questions = document.querySelector('#faqs-body')
+const faqsBody = document.querySelector('#faqs-body')
 let questionNumber = 1;
 
 const renderData = async () => {
@@ -18,8 +17,11 @@ const renderData = async () => {
         `
     }) 
 
-    questions.innerHTML = template;
+    faqsBody.innerHTML = template;
+    toggleAccordion();
+}
 
+const toggleAccordion = async () => {
     document.querySelectorAll('.accordion').forEach(item => {
         const c = item.children;
         // Expands/collapses accordion on click & toggles arrow icon
