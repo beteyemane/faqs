@@ -121,8 +121,12 @@ body {
     padding-bottom: 65px;
 }
 
-@media screen and (max-width: 1085px) {
-    #main-content > .container {
+@media screen and (max-width: 986px) {
+    #main-content {
+        flex-direction: column;
+    }
+
+    .container {
         width: 100%;
     }
 }
