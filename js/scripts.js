@@ -1,6 +1,7 @@
 "use strict";
-
 const questions = document.querySelector('#faqs-body')
+let questionNumber = 1;
+
 const renderData = async () => {
     let uri = 'http://localhost:3000/rows';
 
@@ -19,6 +20,14 @@ const renderData = async () => {
 
     questions.innerHTML = template;
 
+    document.querySelectorAll('.accordion').forEach(item => {
+        const c = item.children;
+        // Expands/collapses accordion on click & toggles arrow icon
+        c[0].addEventListener('click', () => {
+        c[0].classList.toggle("active");
+        c[1].classList.toggle("expand");
+        })
+      })
 }
 
 window.addEventListener('DOMContentLoaded', () => renderData())
