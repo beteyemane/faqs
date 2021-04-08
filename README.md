@@ -25,4 +25,4 @@ To render to FAQ points from the json file, I used the `live-server` library.
 
 ## Interactivity
 
-In order to expand the questions to reveal the answers, I added a class that has a css max-height property to the element, on click using JavaScript. The class also had a transition attripute to display a seamless effect.
+In order to expand the questions to reveal the answers, I added a class that has a css max-height property to the element, on click using JavaScript. The class also has a transition property to display a seamless effect when collapsing/expanding.
