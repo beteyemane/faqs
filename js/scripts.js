@@ -2,13 +2,12 @@ const faqsBody = document.querySelector('#faqs-body')
 let questionNumber = 1;
 
 const renderData = async () => {
-    let uri = 'http://localhost:3000/rows';
+    let uri = './js/data.json';
 
     const res = await fetch(uri);
-    const rows = await res.json();
-    
+    const data = await res.json();
     let template = '';
-    rows.forEach(row => {
+    data.rows.forEach(row => {
         template += 
         `<div class="accordion">
             <div class="title"> ${questionNumber++}. ${row.title}? </div>
